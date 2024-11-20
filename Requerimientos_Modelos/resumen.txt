@@ -1,0 +1,56 @@
+from gestion_inmuebles.models import Inmueble
+
+# Crear un objeto con el modelo
+inmueble1 = Inmueble.objects.create(
+    nombre="Casa Familiar",
+    descripcion="Casa amplia con jardín",
+    m2_construidos=120.5,
+    m2_totales=300.0,
+    estacionamientos=2,
+    habitaciones=4,
+    banos=3,
+    direccion="Calle Principal 123",
+    comuna="Santiago",
+    tipo_inmueble="casa",
+    precio_mensual=800000
+)
+
+print(inmueble1)
+# Casa Familiar 
+
+inmueble2 = Inmueble(
+    nombre="Departamento Moderno",
+    descripcion="Departamento céntrico",
+    m2_construidos=80.0,
+    m2_totales=80.0,
+    estacionamientos=1,
+    habitaciones=2,
+    banos=2,
+    direccion="Avenida Central 456",
+    comuna="Providencia",
+    tipo_inmueble="departamento",
+    precio_mensual=650000
+)
+
+inmueble2.save()
+
+print(inmueble2)
+
+# Enlistar todos los inmuebles 
+inmuebles = Inmueble.objects.all()
+for inmueble in inmuebles:
+    print(inmueble)
+ 
+ 
+# Actualizando un registro
+ inmueble = Inmueble.objects.get(id=2)
+ 
+# Actualizar atributos
+inmueble.precio_mensual = 850000
+inmueble.habitaciones = 5
+inmueble.save()
+
+# Borrando Inmueble 
+inmueble = Inmueble.objects.get(id=2)
+inmueble.delete()
+ 
