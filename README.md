@@ -12,7 +12,7 @@ Plataforma web para gestión de arriendos de inmuebles, que permite a usuarios r
 
 ### Arrendatarios
 - Listar propiedades por comuna
-- Generar solicitudes de arriendo
+- Generar registros de arriendo
 - Explorar detalles de inmuebles
 
 ### Arrendadores
