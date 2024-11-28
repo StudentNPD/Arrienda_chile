@@ -1,0 +1,108 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+{% block title %}Inmuebles{% endblock %}
+
+{% block content %}
+
+<h1 class="text-center pt-5">DESTACADOS</h1>
+<hr>
+<!-- Recorrer elementos -->
+<!--SECCION DESTACADOS CARDS-->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <h1>Filtros</h1>
+                <!-- list_display = ("nombre", "descripcion", "direccion", "comuna", "tipo_inmueble", "precio_mensual", "m2_construidos",
+                "m2_totales", "estacionamientos", "habitaciones", "banos") -->
+                <p>Comuna</p>
+
+                <p>Tipo de inmueble</p>
+                <p>Cantidad de habitaciones</p>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="{{ inmuebles.comuna }}"
+                            id="firstCheckbox">
+                        <label class="form-check-label" for="firstCheckbox">
+                            Santiago
+                        </label>
+
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                        <label class="form-check-label" for="secondCheckbox">2</label>
+                    </li>
+                    <li class="list-group-item">
+                        <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                        <label class="form-check-label" for="thirdCheckbox">3</label>
+                    </li>
+                </ul>
+                <p>Cantidad de baños</p>
+                <p>Cantidad de estacionamientos</p>
+                <p>Precio</p>
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <!-- <div class="btn-group me-2" role="group" aria-label="First group">
+                        <button type="button" class="btn btn-primary">1</button>
+                        <button type="button" class="btn btn-primary">2</button>
+                        <button type="button" class="btn btn-primary">3</button>
+                        <button type="button" class="btn btn-primary">4</button>
+                    </div> -->
+                    <div class="btn-group me-2" role="group" aria-label="Second group">
+                        <button type="button" class="btn btn-secondary">1</button>
+                        <button type="button" class="btn btn-secondary">2</button>
+                        <button type="button" class="btn btn-secondary">3</button>
+                        <button type="button" class="btn btn-secondary">4</button>
+                        <button type="button" class="btn btn-secondary">5</button>
+                    </div>
+                    <!-- <div class="btn-group" role="group" aria-label="Third group">
+                        <button type="button" class="btn btn-info">8</button>
+                    </div> -->
+                </div>
+
+            </div>
+            <div class="col-10 ">
+                <!-- list_display = ("nombre", "descripcion", "direccion", "comuna", "tipo_inmueble", "precio_mensual", "m2_construidos",
+                                "m2_totales", "estacionamientos", "habitaciones", "banos") -->
+                <div class="row row-cols-1 row-cols-md-3 g-4 pb-5">
+                    {% for inmuebles in inmuebles %}
+                    <div class="col">
+                        <div class="card h-100 order border-0">
+                            <img src="https://imanquehue.com/content/uploads/departamento-piloto.png" alt="Descripción">
+                            <div class="card-body p-4 ">
+                                <p> {{inmuebles.comuna}} </p>
+                                <h5 class="card-title">{{inmuebles.nombre}}</h5>
+                                <h3 class="card-text fw-medium"> {{inmuebles.precio}} </h3>
+                                <p class="card-text">{{inmuebles.descripcion}}</p>
+                                <p>{{inmuebles.habitaciones}}habitaciones | {{inmuebles.banos}}baños |
+                                    {{inmuebles.m2_construidos}}m² útiles </p>
+                                <a href="#" class="btn btn-primary">Solicitar más información</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+{% endblock %}

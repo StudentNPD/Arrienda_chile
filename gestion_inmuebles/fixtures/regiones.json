@@ -1,0 +1,84 @@
+[
+  {
+    "model": "gestion_inmuebles.Region",
+    "pk": "01",
+    "fields": { "nombre": "Región de Tarapacá" }
+  },
+  {
+    "model": "gestion_inmuebles.Region",
+    "pk": "02",
+    "fields": { "nombre": "Región de Antofagasta" }
+  },
+  {
+    "model": "gestion_inmuebles.Region",
+    "pk": "03",
+    "fields": { "nombre": "Región de Atacama" }
+  },
+  {
+    "model": "gestion_inmuebles.Region",
+    "pk": "04",
+    "fields": { "nombre": "Región de Coquimbo" }
+  },
+  {
+    "model": "gestion_inmuebles.Region",
+    "pk": "05",
+    "fields": { "nombre": "Región de Valparaíso" }
+  },
+  {
+    "model": "gestion_inmuebles.Region",
+    "pk": "06",
+    "fields": { "nombre": "Región del Libertador General Bernardo O'Higgins" }
+  },
+  {
+    "model": "gestion_inmuebles.Region",
+    "pk": "07",
+    "fields": { "nombre": "Región del Maule" }
+  },
+  {
+    "model": "gestion_inmuebles.Region",
+    "pk": "08",
+    "fields": { "nombre": "Región del Biobío" }
+  },
+  {
+    "model": "gestion_inmuebles.Region",
+    "pk": "09",
+    "fields": { "nombre": "Región de la Araucanía" }
+  },
+  {
+    "model": "gestion_inmuebles.Region",
+    "pk": "10",
+    "fields": { "nombre": "Región de Los Lagos" }
+  },
+  {
+    "model": "gestion_inmuebles.Region",
+    "pk": "11",
+    "fields": {
+      "nombre": "Región de Aysén del General Carlos Ibáñez del Campo"
+    }
+  },
+  {
+    "model": "gestion_inmuebles.Region",
+    "pk": "12",
+    "fields": { "nombre": "Región de Magallanes y de la Antártica Chilena" }
+  },
+  {
+    "model": "gestion_inmuebles.Region",
+    "pk": "13",
+    "fields": { "nombre": "Región Metropolitana de Santiago" }
+  },
+  {
+    "model": "gestion_inmuebles.Region",
+    "pk": "14",
+    "fields": { "nombre": "Región de Los Ríos" }
+  },
+  {
+    "model": "gestion_inmuebles.Region",
+    "pk": "15",
+    "fields": { "nombre": "Región de Arica y Parinacota" }
+  },
+  {
+    "model": "gestion_inmuebles.Region",
+    "pk": "16",
+    "fields": { "nombre": "Región de Ñuble" }
+  }
+]

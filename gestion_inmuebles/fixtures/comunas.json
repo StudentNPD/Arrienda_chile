@@ -1,0 +1,82 @@
+[
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Iquique", "region": "01" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Alto Hospicio", "region": "01" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Antofagasta", "region": "02" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Calama", "region": "02" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Copiapó", "region": "03" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Vallenar", "region": "03" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "La Serena", "region": "04" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Coquimbo", "region": "04" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Valparaíso", "region": "05" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Viña del Mar", "region": "05" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Rancagua", "region": "06" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Machalí", "region": "06" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Talca", "region": "07" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Curicó", "region": "07" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Concepción", "region": "08" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Talcahuano", "region": "08" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Temuco", "region": "09" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Padre Las Casas", "region": "09" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Puerto Montt", "region": "10" }
+  },
+  {
+    "model": "gestion_inmuebles.Comuna",
+    "fields": { "nombre": "Osorno", "region": "10" }
+  }
+]

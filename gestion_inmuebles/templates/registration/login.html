@@ -1,0 +1,58 @@
+<!-- {% extends "layouts/base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header text-center bg-primary text-white">
+                    <h2>Iniciar Sesión</h2>
+                </div>
+                <div class="card-body">
+                    {% if form.errors %}
+                    <div class="alert alert-danger" role="alert">
+                        Error con usuario o contraseña. Por favor, intenta de nuevo.
+                    </div>
+                    {% else %}
+                    <p class="text-muted">
+                        Por favor, utiliza el siguiente formulario para iniciar sesión.
+                        <a href="{% url 'register' %}" class="text-primary">¡Crea tu cuenta aquí!</a>
+                    </p>
+                    {% endif %}
+
+                    <form action="{% url 'login' %}" method="post" class="needs-validation " novalidate>
+                        {% csrf_token %}
+                        <div class="mb-3 ">
+                            {{ form.username.label_tag}}
+                            {{ form.username}}
+
+                            {% if form.username.errors %}
+                            <div class="text-danger">{{ form.username.errors }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="mb-3">
+                            {{ form.password.label_tag }}
+                            {{ form.password }}
+                            {% if form.password.errors %}
+                            <div class="text-danger">{{ form.password.errors }}</div>
+                            {% endif %}
+                        </div>
+
+                        <input type="hidden" name="next" value="{{ next }}">
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <p class="mb-0">
+                        <a href="#" class="text-secondary">¿Olvidaste tu contraseña?</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %} -->
