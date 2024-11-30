@@ -4,7 +4,7 @@ from .models import Inmueble, Usuario, RegistroArriendo, UsuarioInmuebles, Regio
 # Register your models here.
 class InmuebleAdmin(admin.ModelAdmin):
     # Columnas a mostrar en el panel 
-    list_display = ("nombre", "descripcion", "direccion", "comuna", "tipo_inmueble", "precio", "m2_construidos", "m2_totales", "estacionamientos", "habitaciones", "banos")
+    list_display = ("nombre","usuario", "foto_inmueble" ,"descripcion", "direccion", "comuna","region", "tipo_inmueble", "precio", "m2_construidos", "m2_totales", "estacionamientos", "habitaciones", "banos")
     # Busqueda especifica
     search_fields = ["nombre", "comuna","tipo_inmueble"]
     # Filtro

@@ -1,0 +1,77 @@
+[
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 1,
+    "fields": {
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "rut": "12345678-9",
+      "direccion": "Calle Falsa 123",
+      "telefono": "987654321",
+      "email": "juan@example.com",
+      "tipo_usuario": "arrendador",
+      "is_active": true,
+      "is_staff": true
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 2,
+    "fields": {
+      "nombre": "Ana",
+      "apellido": "Gómez",
+      "rut": "22345678-9",
+      "direccion": "Av. Siempreviva 742",
+      "telefono": "123456789",
+      "email": "ana@example.com",
+      "tipo_usuario": "arrendatario",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 3,
+    "fields": {
+      "nombre": "Luis",
+      "apellido": "Martínez",
+      "rut": "32345678-9",
+      "direccion": "Calle 8 Norte 456",
+      "telefono": "456789123",
+      "email": "luis@example.com",
+      "tipo_usuario": "arrendador",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 4,
+    "fields": {
+      "nombre": "Carla",
+      "apellido": "Rojas",
+      "rut": "42345678-9",
+      "direccion": "Av. Las Palmas 789",
+      "telefono": "789123456",
+      "email": "carla@example.com",
+      "tipo_usuario": "arrendatario",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 5,
+    "fields": {
+      "nombre": "Sofía",
+      "apellido": "López",
+      "rut": "52345678-9",
+      "direccion": "Calle Central 321",
+      "telefono": "321987654",
+      "email": "sofia@example.com",
+      "tipo_usuario": "arrendador",
+      "is_active": true,
+      "is_staff": false
+    }
+  }
+]

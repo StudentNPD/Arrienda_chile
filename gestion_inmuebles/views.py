@@ -1,11 +1,11 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import logout
+from django.contrib.auth import login, authenticate
 from django.contrib.auth import views as auth_views
 from django.contrib import messages
-# from django.contrib.auth.forms import UserCreationForm
+
 from .forms import *
-from .models import Inmueble
+from .models import *
 
 
 
@@ -16,43 +16,130 @@ def dashboard(request):
 
 def inmuebles(request):
     inmuebles = Inmueble.objects.all()
-    return render(request,'inmuebles.html',
-                  {
-                      'inmuebles':inmuebles
-                  })
-
-class CustomLogoutView(auth_views.LogoutView):
-    next_page = 'login'
+    comunas = Comuna.objects.all()
+    regiones = Region.objects.all()
     
-    def get(self, request, *args, **kwargs):
-        if request.user.is_authenticated:
-            logout(request)
-        return redirect(self.next_page)
+    region_id = request.POST.get('region')
+    comuna_id = request.POST.get('comuna')
+    tipo_inmueble = request.POST.get('tipo_inmueble')
+    
+    if comuna_id and comuna_id != '':
+        inmuebles = inmuebles.filter(comuna_id=comuna_id)
+    elif region_id and region_id != '':
+        inmuebles = inmuebles.filter(region_id=region_id)
+    elif tipo_inmueble :
+        inmuebles = inmuebles.filter(tipo_inmueble=tipo_inmueble)
+    
+    context = { 
+        'inmuebles' :inmuebles,
+        'comunas' :comunas,
+        'regiones':regiones,
+        'tipo_inmueble':tipo_inmueble,
+        'comuna_seleccionada': None
+    }
+
+    return render(request,'inmuebles.html', context)
+    
+@login_required
+def crear_inmueble(request):
+    if request.method == 'GET':
+        return render(request, 'crear_inmueble.html',{
+            'form': InmuebleForm
+        })
+    else:
+        try:
+            form = InmuebleForm(request.POST, request.FILES)
+            if form.is_valid():
+                nuevo_inmueble = form.save(commit=False)
+                nuevo_inmueble.usuario = request.user
+                nuevo_inmueble.save()
+                return redirect('inmuebles')
+            else:
+                raise ValueError('Formulario inválido')
+        except ValueError:
+            return render(request, 'crear_inmueble.html',{
+                'form': InmuebleForm,
+                'error': ' Ingresa datos validos'
+            })
+
+@login_required
+def detalle_inmueble(request, inmueble_id):
+    inmueble = get_object_or_404(Inmueble, pk=inmueble_id)
+    
+    usuario_inmueble = UsuarioInmuebles.objects.filter(
+        inmueble=inmueble, 
+        usuario_arrendador=request.user
+    ).first()
     
 
-
-def registrar_usuario(request):
     if request.method == 'POST':
-        form = UsuarioForm(request.POST)
+        form = InmuebleForm(request.POST, request.FILES, instance=inmueble)
         if form.is_valid():
-            usuario = form.save()
-            messages.success(request, f'Bienvenido {usuario.nombre}')
-            return redirect('register_done')
+            form.save()
+            messages.success(request, 'Propiedad actualizada exitosamente.')
+            return redirect('inmuebles')
+        else:
+            messages.error(request, 'Por favor corrige los errores en el formulario.')
+    else:
+        form = InmuebleForm(instance=inmueble)
+    
+    return render(request, 'editar_inmueble.html', {
+        'form': form,
+        'inmueble': inmueble
+    })
+
+
+@login_required
+def eliminar_inmueble(request, inmueble_id):
+    inmueble = get_object_or_404(Inmueble, pk=inmueble_id)
+    usuario_inmueble = UsuarioInmuebles.objects.filter(
+        inmueble=inmueble, 
+        usuario_arrendador=request.user
+    ).first()
+    if request.method == 'POST':
+        # Delete associated UsuarioInmuebles first
+        UsuarioInmuebles.objects.filter(inmueble=inmueble).delete()
+        
+        # Then delete the Inmueble
+        inmueble.delete()
+        messages.success(request, 'Propiedad eliminada exitosamente.')
+        return redirect('inmuebles')
+    
+@login_required
+def mostrar_inmuebles(request):
+    mostrar_inmuebles = Inmueble.objects.all()
+
+    return render(request, 'mostrar_inmuebles.html', {
+        'mostrar_inmuebles': mostrar_inmuebles
+    }) 
+
+
+def editar_perfil(request):
+    return render(request, 'perfil.html')
+
+
+def register(request):
+    if request.method == 'POST':
+        form = UsuarioForm(request.POST, request.FILES)
+        if form.is_valid():
+            user = form.save()
+            authenticated_user = authenticate(
+                username=form.cleaned_data['email'], 
+                password=form.cleaned_data['password1']
+            )
+            if authenticated_user:
+                login(request, authenticated_user)
+                return redirect('inmuebles') 
     else:
         form = UsuarioForm()
     
     return render(request, 'registration/register.html', {'form': form})
+  
+def logout(request):
+    return render(request,'registration/logout.html')
+  
 
+@login_required
 def register_done(request):
     return render(request, 'registration/register_done.html')
-
-
-# def registro(request):
-#     if request.method == 'POST':
-#          form = UserCreationForm(request.POST)
-#          if form.is_valid():
-#              form.save()
-#              return redirect('login')
-#          else:
-#              form = UserCreationForm()
-#              return render(request, 'register.html', {'form': form})
+        

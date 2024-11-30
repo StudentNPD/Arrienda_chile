@@ -1,0 +1,97 @@
+[
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 1,
+    "fields": {
+      "nombre": "Casa Familiar",
+      "descripcion": "Casa espaciosa para toda la familia.",
+      "m2_construidos": 120.0,
+      "m2_totales": 200.0,
+      "estacionamientos": 2,
+      "habitaciones": 3,
+      "banos": 2,
+      "direccion": "Calle Larga 123",
+      "region": "01",
+      "comuna": 1,
+      "tipo_inmueble": "casa",
+      "precio": 120000000,
+      "usuario": 1
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 2,
+    "fields": {
+      "nombre": "Departamento Moderno",
+      "descripcion": "Moderno departamento en el centro de la ciudad.",
+      "m2_construidos": 60.0,
+      "m2_totales": 65.0,
+      "estacionamientos": 1,
+      "habitaciones": 2,
+      "banos": 1,
+      "direccion": "Calle Principal 456",
+      "region": "13",
+      "comuna": 13,
+      "tipo_inmueble": "departamento",
+      "precio": 85000000,
+      "usuario": 2
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 3,
+    "fields": {
+      "nombre": "Casa en la Playa",
+      "descripcion": "Hermosa casa frente al mar.",
+      "m2_construidos": 150.0,
+      "m2_totales": 300.0,
+      "estacionamientos": 2,
+      "habitaciones": 4,
+      "banos": 3,
+      "direccion": "Av. Costanera 789",
+      "region": "05",
+      "comuna": 9,
+      "tipo_inmueble": "casa",
+      "precio": 180000000,
+      "usuario": 3
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 4,
+    "fields": {
+      "nombre": "Parcela Rural",
+      "descripcion": "Amplia parcela con jardín y huerto.",
+      "m2_construidos": 200.0,
+      "m2_totales": 5000.0,
+      "estacionamientos": 3,
+      "habitaciones": 5,
+      "banos": 3,
+      "direccion": "Camino Rural 123",
+      "region": "07",
+      "comuna": 12,
+      "tipo_inmueble": "parcela",
+      "precio": 220000000,
+      "usuario": 4
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 5,
+    "fields": {
+      "nombre": "Departamento Económico",
+      "descripcion": "Pequeño departamento para una persona.",
+      "m2_construidos": 35.0,
+      "m2_totales": 40.0,
+      "estacionamientos": 0,
+      "habitaciones": 1,
+      "banos": 1,
+      "direccion": "Calle Pequeña 456",
+      "region": "08",
+      "comuna": 13,
+      "tipo_inmueble": "departamento",
+      "precio": 40000000,
+      "usuario": 5
+    }
+  }
+]

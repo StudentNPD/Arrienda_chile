@@ -1,5 +1,6 @@
+<!-- CREAR INMUEBLE  -->
 {% extends "layouts/base.html" %}
-{% block title %}Create your account{% endblock %}
+{% block title %}Arriendo{% endblock %}
 {% block content %}
 
 <div class="container py-5">
@@ -7,10 +8,10 @@
         <div class="col-md-6">
             <div class="card shadow-sm">
                 <div class="card-header text-center bg-primary text-white">
-                    <h2>Registrate!</h2>
+                    <h2>Registra tu inmueble!</h2>
                 </div>
                 <div class="card-body">
-                    <!-- {% if form.errors %}
+                    {% if form.errors %}
                     <div class="alert alert-danger" role="alert">
                         Error con usuario o contraseña. Por favor, intenta de nuevo.
                     </div>
@@ -19,14 +20,17 @@
                         Por favor, utiliza el siguiente formulario para iniciar sesión.
                         <a href="{% url 'register' %}" class="text-primary">¡Crea tu cuenta aquí!</a>
                     </p>
-                    {% endif %} -->
+                    {% endif %}
 
-                    <form action="{% url 'register' %}" method="POST" class="needs-validation " novalidate
+                    <form action="{% url 'crear_inmueble' %}" method="POST" class="needs-validation " novalidate
                         enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="mb-3 ">
                             {{ form.as_p}}
                         </div>
+
+
+
                         <input type="hidden" name="next" value="{{ next }}">
                         <div class="d-grid">
                             <button type="submit" class="btn btn-primary btn-block">Registrar</button>
@@ -42,5 +46,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}

@@ -9,13 +9,13 @@ body {
 }
 
 .navbar {
-  background-color: var(--primary-color);
+  background-color: #ffe600; /* Color actualizado */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
   font-weight: bold;
-  color: white !important;
+  color: rgb(0, 0, 0) !important;
   transition: transform 0.3s ease;
 }
 
