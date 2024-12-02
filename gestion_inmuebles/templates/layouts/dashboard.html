@@ -1,0 +1,163 @@
+{% extends "layouts/base.html" %}
+{% block title %}Inmobiliaria{% endblock %}
+
+{% block content %}
+
+
+
+<!-- Header-->
+<header class="hero-header "
+    style="background-image: url('https://images.adsttc.com/media/images/622f/6787/5950/fa06/9469/4e63/newsletter/mapu-5-012.jpg?1647273914')">
+    <div class="hero-overlay"></div>
+    <div class="container position-relative">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center hero-content">
+                <h1 class="display-5 fw-bold text-white mb-3">Encuentra Tu Hogar Perfecto</h1>
+                <p class="lead text-white-50 mb-4">Explora propiedades únicas y encuentra el lugar de tus sueños con
+                    nosotros.</p>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <a href="#features" class="btn btn-primary btn-lg btn-cta px-4">Ver Propiedades</a>
+                    <a href="#!" class="btn btn-outline-light btn-lg btn-cta px-4">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Featured Properties -->
+<section class="py-5">
+    <div class="container px-5">
+        <h2 class="fw-bolder text-center mb-5">Propiedades Destacadas</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card property-card h-100 shadow-sm border-0">
+                    <img src="https://amazingarchitecture.com/storage/360/54987497_image10010.jpg" class="card-img-top"
+                        alt="Propiedad 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Casa Moderna en Zona Residencial</h5>
+                        <p class="card-text text-muted">Hermosa casa con diseño contemporáneo y vistas espectaculares.
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h4 text-primary mb-0">$450,000</span>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card property-card h-100 shadow-sm border-0">
+                    <img src="https://www.bchydro.com/content/dam/BCHydro/customer-portal/photographs/places/building-exteriors/apartment-building-retrofit-660x372.jpg"
+                        class="card-img-top" alt="Propiedad 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Apartamento de Lujo</h5>
+                        <p class="card-text text-muted">Apartamento de 2 habitaciones en edificio premium con
+                            amenidades.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h4 text-primary mb-0">$250,000</span>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card property-card h-100 shadow-sm border-0">
+                    <img src="https://images.adsttc.com/media/images/622f/6787/5950/fa06/9469/4e63/newsletter/mapu-5-012.jpg"
+                        class="card-img-top" alt="Propiedad 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Terreno en Zona de Desarrollo</h5>
+                        <p class="card-text text-muted">Gran oportunidad de inversión en área de alto potencial.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="h4 text-primary mb-0">$180,000</span>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Quote/testimonial aside-->
+<aside class="testimonial-section">
+    <div class="container px-5">
+        <div class="row gx-5 justify-content-center">
+            <div class="col-xl-8 text-center">
+                <div class="testimonial-content">
+                    <blockquote class="testimonial-quote h2 fs-1 mb-4">
+                        "Encontrar la casa perfecta parecía imposible hasta que descubrimos esta revolucionaria
+                        plataforma inmobiliaria.
+                        ¡Transformó nuestra búsqueda de propiedades de frustrante a fantástica!"
+                    </blockquote>
+
+
+                    <div class="testimonial-author mt-3">
+                        <i class="bi bi-person-check me-2"></i>
+                        Laura Nadal
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+
+<div class="seccion-caracteristicas container px-4">
+    <h2 class="encabezado-seccion pb-2">Nuestras Soluciones Inmobiliarias</h2>
+    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+        <div class="col d-flex flex-column align-items-start gap-3">
+            <h2 class="fw-bold">Revoluciona tu Búsqueda de Propiedades</h2>
+            <p class="descripcion-principal">Descubre una plataforma integral diseñada para transformar tu experiencia
+                inmobiliaria. Desde búsquedas de propiedades intuitivas hasta transacciones fluidas, ofrecemos
+                herramientas de vanguardia que simplifican cada paso de tu inversión inmobiliaria.</p>
+            <a href="#" class="btn btn-primary btn-lg boton-llamada">Explora Nuestros Servicios</a>
+        </div>
+        <div class="col">
+            <div class="row row-cols-1 row-cols-sm-2 g-4">
+                <div class="col">
+                    <div class="tarjeta-caracteristica h-100">
+                        <div class="icono-caracteristica">
+                            <i class="bi bi-house"></i>
+                        </div>
+                        <h4 class="titulo-caracteristica">Catálogo de Propiedades</h4>
+                        <p class="descripcion-caracteristica">Base de datos extensa de propiedades verificadas en
+                            múltiples ubicaciones y rangos de precios.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="tarjeta-caracteristica h-100">
+                        <div class="icono-caracteristica">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <h4 class="titulo-caracteristica">Inteligencia de Ubicación</h4>
+                        <p class="descripcion-caracteristica">Mapeo avanzado e información de barrios para tomar
+                            decisiones informadas.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="tarjeta-caracteristica h-100">
+                        <div class="icono-caracteristica">
+                            <i class="bi bi-cart4"></i>
+                        </div>
+                        <h4 class="titulo-caracteristica">Transacciones Sencillas</h4>
+                        <p class="descripcion-caracteristica">Proceso de compra optimizado con transacciones seguras y
+                            transparentes.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="tarjeta-caracteristica h-100">
+                        <div class="icono-caracteristica">
+                            <i class="fa-solid fa-vr-cardboard"></i>
+                        </div>
+                        <h4 class="titulo-caracteristica">Tours Virtuales</h4>
+                        <p class="descripcion-caracteristica">Tours inmersivos en 3D que permiten explorar y evaluar
+                            propiedades de forma remota.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

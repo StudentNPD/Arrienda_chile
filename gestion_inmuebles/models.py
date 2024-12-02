@@ -4,9 +4,6 @@ from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, Permis
 
 
 
-
-
-
 class CustomUserManager(BaseUserManager):    
     def create_user(self, email, password=None, **extra_fields):
         if not email:
@@ -51,7 +48,7 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     apellido = models.CharField(max_length=200)
     rut = models.CharField(max_length=12, unique=True)
     direccion = models.TextField()
-    telefono = models.CharField(max_length=15, unique=True)
+    telefono = models.CharField(max_length=15)
     email = models.CharField(max_length=100, unique=True)
     tipo_usuario = models.CharField(
         max_length=20, 

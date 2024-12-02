@@ -12,7 +12,7 @@ from .models import *
 
 @login_required
 def dashboard(request):
-    return render (request, 'registration/dashboard.html', {'section':'dashboard'})
+    return render (request, 'layouts/dashboard.html', {'section':'dashboard'})
 
 def inmuebles(request):
     inmuebles = Inmueble.objects.all()
@@ -64,14 +64,7 @@ def crear_inmueble(request):
 
 @login_required
 def detalle_inmueble(request, inmueble_id):
-    inmueble = get_object_or_404(Inmueble, pk=inmueble_id)
-    
-    usuario_inmueble = UsuarioInmuebles.objects.filter(
-        inmueble=inmueble, 
-        usuario_arrendador=request.user
-    ).first()
-    
-
+    inmueble = get_object_or_404(Inmueble, pk=inmueble_id, usuario=request.user)
     if request.method == 'POST':
         form = InmuebleForm(request.POST, request.FILES, instance=inmueble)
         if form.is_valid():
@@ -92,31 +85,35 @@ def detalle_inmueble(request, inmueble_id):
 @login_required
 def eliminar_inmueble(request, inmueble_id):
     inmueble = get_object_or_404(Inmueble, pk=inmueble_id)
-    usuario_inmueble = UsuarioInmuebles.objects.filter(
-        inmueble=inmueble, 
-        usuario_arrendador=request.user
-    ).first()
-    if request.method == 'POST':
-        # Delete associated UsuarioInmuebles first
-        UsuarioInmuebles.objects.filter(inmueble=inmueble).delete()
-        
-        # Then delete the Inmueble
-        inmueble.delete()
-        messages.success(request, 'Propiedad eliminada exitosamente.')
-        return redirect('inmuebles')
+    inmueble.delete()
+    messages.success(request, 'Propiedad eliminada exitosamente.')
+    return redirect('inmuebles')
+
     
 @login_required
 def mostrar_inmuebles(request):
-    mostrar_inmuebles = Inmueble.objects.all()
-
+    mostrar_inmuebles = Inmueble.objects.filter(
+        usuario = request.user
+    )
     return render(request, 'mostrar_inmuebles.html', {
         'mostrar_inmuebles': mostrar_inmuebles
     }) 
 
 
+@login_required
 def editar_perfil(request):
-    return render(request, 'perfil.html')
+    user = request.user
+    form = UsuarioForm(request.POST or None, request.FILES or None, instance=user)
 
+    if request.method == 'POST' and form.is_valid():
+        form.save()
+        return redirect('inmuebles')
+
+    context = {
+        "form": form
+    }
+
+    return render(request, "editar_perfil.html", context)
 
 def register(request):
     if request.method == 'POST':
@@ -135,11 +132,4 @@ def register(request):
     
     return render(request, 'registration/register.html', {'form': form})
   
-def logout(request):
-    return render(request,'registration/logout.html')
-  
 
-@login_required
-def register_done(request):
-    return render(request, 'registration/register_done.html')
-        

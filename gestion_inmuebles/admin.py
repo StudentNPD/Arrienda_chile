@@ -11,7 +11,7 @@ class InmuebleAdmin(admin.ModelAdmin):
     list_filter = ["tipo_inmueble", "comuna"]
 
 class UsuarioAdmin(admin.ModelAdmin):
-    list_display = ("nombre","apellido","rut", "direccion","telefono","email","tipo_usuario")
+    list_display = ("nombre","foto_usuario", "apellido","rut", "direccion","telefono","email","password","tipo_usuario")
     search_fields = ["rut","nombre","apellido"]
     list_filter = ["rut","nombre","apellido","direccion","tipo_usuario"]
     

@@ -3,6 +3,7 @@
     "model": "gestion_inmuebles.usuario",
     "pk": 1,
     "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
       "nombre": "Juan",
       "apellido": "Pérez",
       "rut": "12345678-9",
@@ -18,6 +19,7 @@
     "model": "gestion_inmuebles.usuario",
     "pk": 2,
     "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
       "nombre": "Ana",
       "apellido": "Gómez",
       "rut": "22345678-9",
@@ -33,6 +35,7 @@
     "model": "gestion_inmuebles.usuario",
     "pk": 3,
     "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
       "nombre": "Luis",
       "apellido": "Martínez",
       "rut": "32345678-9",
@@ -48,6 +51,7 @@
     "model": "gestion_inmuebles.usuario",
     "pk": 4,
     "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
       "nombre": "Carla",
       "apellido": "Rojas",
       "rut": "42345678-9",
@@ -63,12 +67,334 @@
     "model": "gestion_inmuebles.usuario",
     "pk": 5,
     "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
       "nombre": "Sofía",
       "apellido": "López",
       "rut": "52345678-9",
       "direccion": "Calle Central 321",
       "telefono": "321987654",
       "email": "sofia@example.com",
+      "tipo_usuario": "arrendador",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 6,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Carlos",
+      "apellido": "González",
+      "rut": "62345678-9",
+      "direccion": "Pasaje Los Alamos 234",
+      "telefono": "987123456",
+      "email": "carlos.gonzalez@example.com",
+      "tipo_usuario": "arrendatario",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 7,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "María",
+      "apellido": "Fernández",
+      "rut": "72345678-9",
+      "direccion": "Av. Los Conquistadores 567",
+      "telefono": "456321789",
+      "email": "maria.fernandez@example.com",
+      "tipo_usuario": "arrendador",
+      "is_active": true,
+      "is_staff": true
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 8,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Diego",
+      "apellido": "Sánchez",
+      "rut": "82345678-9",
+      "direccion": "Calle del Bosque 890",
+      "telefono": "654987321",
+      "email": "diego.sanchez@example.com",
+      "tipo_usuario": "arrendatario",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 9,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Laura",
+      "apellido": "Torres",
+      "rut": "92345678-9",
+      "direccion": "Paseo Las Rosas 345",
+      "telefono": "321789654",
+      "email": "laura.torres@example.com",
+      "tipo_usuario": "arrendador",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 10,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Roberto",
+      "apellido": "Ramírez",
+      "rut": "102345678-9",
+      "direccion": "Av. Principal 678",
+      "telefono": "789456123",
+      "email": "roberto.ramirez@example.com",
+      "tipo_usuario": "arrendatario",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 11,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Patricia",
+      "apellido": "Morales",
+      "rut": "112345678-9",
+      "direccion": "Calle del Mar 901",
+      "telefono": "456789012",
+      "email": "patricia.morales@example.com",
+      "tipo_usuario": "arrendador",
+      "is_active": true,
+      "is_staff": true
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 12,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Alejandro",
+      "apellido": "Herrera",
+      "rut": "122345678-9",
+      "direccion": "Pasaje Los Olivos 234",
+      "telefono": "987234561",
+      "email": "alejandro.herrera@example.com",
+      "tipo_usuario": "arrendatario",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 13,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Elena",
+      "apellido": "Castro",
+      "rut": "132345678-9",
+      "direccion": "Av. Los Jazmines 567",
+      "telefono": "234567890",
+      "email": "elena.castro@example.com",
+      "tipo_usuario": "arrendador",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 14,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Miguel",
+      "apellido": "Vera",
+      "rut": "142345678-9",
+      "direccion": "Calle Las Higueras 890",
+      "telefono": "567890123",
+      "email": "miguel.vera@example.com",
+      "tipo_usuario": "arrendatario",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 15,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Claudia",
+      "apellido": "Núñez",
+      "rut": "152345678-9",
+      "direccion": "Paseo Central 345",
+      "telefono": "890123456",
+      "email": "claudia.nunez@example.com",
+      "tipo_usuario": "arrendador",
+      "is_active": true,
+      "is_staff": true
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 16,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Jorge",
+      "apellido": "Silva",
+      "rut": "162345678-9",
+      "direccion": "Av. del Parque 678",
+      "telefono": "123456789",
+      "email": "jorge.silva@example.com",
+      "tipo_usuario": "arrendatario",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 17,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Marcela",
+      "apellido": "Ortiz",
+      "rut": "172345678-9",
+      "direccion": "Calle Los Arrayanes 901",
+      "telefono": "456123789",
+      "email": "marcela.ortiz@example.com",
+      "tipo_usuario": "arrendador",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 18,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Ricardo",
+      "apellido": "Mendoza",
+      "rut": "182345678-9",
+      "direccion": "Pasaje Las Brisas 234",
+      "telefono": "789012345",
+      "email": "ricardo.mendoza@example.com",
+      "tipo_usuario": "arrendatario",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 19,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Valentina",
+      "apellido": "Díaz",
+      "rut": "192345678-9",
+      "direccion": "Av. Las Encinas 567",
+      "telefono": "012345678",
+      "email": "valentina.diaz@example.com",
+      "tipo_usuario": "arrendador",
+      "is_active": true,
+      "is_staff": true
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 20,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Fernando",
+      "apellido": "Contreras",
+      "rut": "202345678-9",
+      "direccion": "Calle del Roble 890",
+      "telefono": "345678901",
+      "email": "fernando.contreras@example.com",
+      "tipo_usuario": "arrendatario",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 21,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Andrea",
+      "apellido": "Pizarro",
+      "rut": "212345678-9",
+      "direccion": "Paseo Costero 123",
+      "telefono": "678901234",
+      "email": "andrea.pizarro@example.com",
+      "tipo_usuario": "arrendador",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 22,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Gabriel",
+      "apellido": "Molina",
+      "rut": "222345678-9",
+      "direccion": "Av. Los Aromos 456",
+      "telefono": "901234567",
+      "email": "gabriel.molina@example.com",
+      "tipo_usuario": "arrendatario",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 23,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Carolina",
+      "apellido": "Aguilera",
+      "rut": "232345678-9",
+      "direccion": "Calle Los Alamos 789",
+      "telefono": "234567891",
+      "email": "carolina.aguilera@example.com",
+      "tipo_usuario": "arrendador",
+      "is_active": true,
+      "is_staff": true
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 24,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Daniel",
+      "apellido": "Espinoza",
+      "rut": "242345678-9",
+      "direccion": "Pasaje Las Palmeras 012",
+      "telefono": "567891234",
+      "email": "daniel.espinoza@example.com",
+      "tipo_usuario": "arrendatario",
+      "is_active": true,
+      "is_staff": false
+    }
+  },
+  {
+    "model": "gestion_inmuebles.usuario",
+    "pk": 25,
+    "fields": {
+      "foto_usuario": "usuario/fakta-Doraemon.jpg",
+      "nombre": "Mónica",
+      "apellido": "Santana",
+      "rut": "252345678-9",
+      "direccion": "Av. del Bosque 345",
+      "telefono": "891234567",
+      "email": "monica.santana@example.com",
       "tipo_usuario": "arrendador",
       "is_active": true,
       "is_staff": false

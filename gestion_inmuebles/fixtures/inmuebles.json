@@ -3,6 +3,7 @@
     "model": "gestion_inmuebles.inmueble",
     "pk": 1,
     "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
       "nombre": "Casa Familiar",
       "descripcion": "Casa espaciosa para toda la familia.",
       "m2_construidos": 120.0,
@@ -22,6 +23,7 @@
     "model": "gestion_inmuebles.inmueble",
     "pk": 2,
     "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
       "nombre": "Departamento Moderno",
       "descripcion": "Moderno departamento en el centro de la ciudad.",
       "m2_construidos": 60.0,
@@ -41,6 +43,7 @@
     "model": "gestion_inmuebles.inmueble",
     "pk": 3,
     "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
       "nombre": "Casa en la Playa",
       "descripcion": "Hermosa casa frente al mar.",
       "m2_construidos": 150.0,
@@ -60,6 +63,7 @@
     "model": "gestion_inmuebles.inmueble",
     "pk": 4,
     "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
       "nombre": "Parcela Rural",
       "descripcion": "Amplia parcela con jardín y huerto.",
       "m2_construidos": 200.0,
@@ -79,6 +83,7 @@
     "model": "gestion_inmuebles.inmueble",
     "pk": 5,
     "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
       "nombre": "Departamento Económico",
       "descripcion": "Pequeño departamento para una persona.",
       "m2_construidos": 35.0,
@@ -92,6 +97,407 @@
       "tipo_inmueble": "departamento",
       "precio": 40000000,
       "usuario": 5
+    }
+  },
+
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 6,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Loft Urbano",
+      "descripcion": "Moderno loft en el corazón de la ciudad.",
+      "m2_construidos": 75.0,
+      "m2_totales": 80.0,
+      "estacionamientos": 1,
+      "habitaciones": 1,
+      "banos": 1,
+      "direccion": "Av. Providencia 1234",
+      "region": "13",
+      "comuna": 13,
+      "tipo_inmueble": "departamento",
+      "precio": 95000000,
+      "usuario": 6
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 7,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Casa Colonial",
+      "descripcion": "Hermosa casa con arquitectura tradicional.",
+      "m2_construidos": 180.0,
+      "m2_totales": 400.0,
+      "estacionamientos": 3,
+      "habitaciones": 4,
+      "banos": 3,
+      "direccion": "Calle Los Olivos 567",
+      "region": "05",
+      "comuna": 10,
+      "tipo_inmueble": "casa",
+      "precio": 210000000,
+      "usuario": 7
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 8,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Estudio Compacto",
+      "descripcion": "Pequeño pero acogedor estudio para profesional.",
+      "m2_construidos": 40.0,
+      "m2_totales": 45.0,
+      "estacionamientos": 0,
+      "habitaciones": 1,
+      "banos": 1,
+      "direccion": "Calle Arturo Prat 890",
+      "region": "08",
+      "comuna": 15,
+      "tipo_inmueble": "departamento",
+      "precio": 45000000,
+      "usuario": 8
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 9,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Fundo Agrícola",
+      "descripcion": "Extenso terreno con casa y potencial agrícola.",
+      "m2_construidos": 250.0,
+      "m2_totales": 10000.0,
+      "estacionamientos": 4,
+      "habitaciones": 5,
+      "banos": 4,
+      "direccion": "Camino Rural km 15",
+      "region": "07",
+      "comuna": 13,
+      "tipo_inmueble": "parcela",
+      "precio": 280000000,
+      "usuario": 9
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 10,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Penthouse Vista al Mar",
+      "descripcion": "Exclusivo penthouse con vista panorámica al océano.",
+      "m2_construidos": 150.0,
+      "m2_totales": 180.0,
+      "estacionamientos": 2,
+      "habitaciones": 3,
+      "banos": 2,
+      "direccion": "Av. Costanera 2345",
+      "region": "05",
+      "comuna": 9,
+      "tipo_inmueble": "departamento",
+      "precio": 195000000,
+      "usuario": 10
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 11,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Casa de Campo",
+      "descripcion": "Refugio tranquilo rodeado de naturaleza.",
+      "m2_construidos": 100.0,
+      "m2_totales": 2000.0,
+      "estacionamientos": 2,
+      "habitaciones": 2,
+      "banos": 2,
+      "direccion": "Sector El Arrayán s/n",
+      "region": "09",
+      "comuna": 17,
+      "tipo_inmueble": "casa",
+      "precio": 110000000,
+      "usuario": 11
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 12,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Oficina Ejecutiva",
+      "descripcion": "Espacio corporativo en edificio de primer nivel.",
+      "m2_construidos": 80.0,
+      "m2_totales": 90.0,
+      "estacionamientos": 1,
+      "habitaciones": 0,
+      "banos": 1,
+      "direccion": "Av. Kennedy 4567",
+      "region": "13",
+      "comuna": 13,
+      "tipo_inmueble": "oficina",
+      "precio": 85000000,
+      "usuario": 12
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 13,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Departamento Familiar",
+      "descripcion": "Amplio departamento para familia de 4 personas.",
+      "m2_construidos": 95.0,
+      "m2_totales": 110.0,
+      "estacionamientos": 1,
+      "habitaciones": 3,
+      "banos": 2,
+      "direccion": "Calle Los Naranjos 678",
+      "region": "06",
+      "comuna": 11,
+      "tipo_inmueble": "departamento",
+      "precio": 105000000,
+      "usuario": 13
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 14,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Chalet de Montaña",
+      "descripcion": "Hermoso chalet en zona de ski con vistas espectaculares.",
+      "m2_construidos": 140.0,
+      "m2_totales": 500.0,
+      "estacionamientos": 2,
+      "habitaciones": 3,
+      "banos": 2,
+      "direccion": "Camino a los Andes km 20",
+      "region": "13",
+      "comuna": 13,
+      "tipo_inmueble": "casa",
+      "precio": 220000000,
+      "usuario": 14
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 15,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Mini Departamento",
+      "descripcion": "Pequeño y acogedor espacio perfecto para soltero.",
+      "m2_construidos": 30.0,
+      "m2_totales": 35.0,
+      "estacionamientos": 0,
+      "habitaciones": 1,
+      "banos": 1,
+      "direccion": "Pasaje Los Jazmines 123",
+      "region": "08",
+      "comuna": 15,
+      "tipo_inmueble": "departamento",
+      "precio": 38000000,
+      "usuario": 15
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 16,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Casa Mediterránea",
+      "descripcion": "Casa con diseño mediterráneo y jardín interior.",
+      "m2_construidos": 160.0,
+      "m2_totales": 300.0,
+      "estacionamientos": 2,
+      "habitaciones": 3,
+      "banos": 3,
+      "direccion": "Av. Los Conquistadores 456",
+      "region": "05",
+      "comuna": 9,
+      "tipo_inmueble": "casa",
+      "precio": 185000000,
+      "usuario": 16
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 17,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Terreno Urbanizable",
+      "descripcion": "Gran terreno con potencial de desarrollo inmobiliario.",
+      "m2_construidos": 50.0,
+      "m2_totales": 15000.0,
+      "estacionamientos": 1,
+      "habitaciones": 1,
+      "banos": 1,
+      "direccion": "Sector El Sauce s/n",
+      "region": "07",
+      "comuna": 12,
+      "tipo_inmueble": "terreno",
+      "precio": 95000000,
+      "usuario": 17
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 18,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Apartamento Industrial",
+      "descripcion": "Loft con estilo industrial en zona céntrica.",
+      "m2_construidos": 85.0,
+      "m2_totales": 100.0,
+      "estacionamientos": 1,
+      "habitaciones": 2,
+      "banos": 1,
+      "direccion": "Calle Matucana 789",
+      "region": "13",
+      "comuna": 13,
+      "tipo_inmueble": "departamento",
+      "precio": 110000000,
+      "usuario": 18
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 19,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Casa Pareada",
+      "descripcion": "Moderna casa en conjunto residencial.",
+      "m2_construidos": 120.0,
+      "m2_totales": 180.0,
+      "estacionamientos": 2,
+      "habitaciones": 3,
+      "banos": 2,
+      "direccion": "Pasaje Los Robles 345",
+      "region": "06",
+      "comuna": 11,
+      "tipo_inmueble": "casa",
+      "precio": 135000000,
+      "usuario": 19
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 20,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Estudio Contemporáneo",
+      "descripcion": "Diseño moderno con espacios multifuncionales.",
+      "m2_construidos": 55.0,
+      "m2_totales": 60.0,
+      "estacionamientos": 1,
+      "habitaciones": 1,
+      "banos": 1,
+      "direccion": "Av. Libertad 2210",
+      "region": "08",
+      "comuna": 15,
+      "tipo_inmueble": "departamento",
+      "precio": 62000000,
+      "usuario": 20
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 21,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Casa Familiar Suburbana",
+      "descripcion": "Amplia casa en zona residencial tranquila.",
+      "m2_construidos": 200.0,
+      "m2_totales": 400.0,
+      "estacionamientos": 3,
+      "habitaciones": 4,
+      "banos": 3,
+      "direccion": "Calle Los Cipreses 567",
+      "region": "05",
+      "comuna": 10,
+      "tipo_inmueble": "casa",
+      "precio": 175000000,
+      "usuario": 21
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 22,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Micro Loft Urbano",
+      "descripcion": "Compacto y eficiente espacio para vida moderna.",
+      "m2_construidos": 28.0,
+      "m2_totales": 35.0,
+      "estacionamientos": 0,
+      "habitaciones": 1,
+      "banos": 1,
+      "direccion": "Pasaje Los Laureles 89",
+      "region": "13",
+      "comuna": 13,
+      "tipo_inmueble": "departamento",
+      "precio": 42000000,
+      "usuario": 22
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 23,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Casa con Piscina",
+      "descripcion": "Hermosa propiedad con piscina y área de descanso.",
+      "m2_construidos": 180.0,
+      "m2_totales": 500.0,
+      "estacionamientos": 3,
+      "habitaciones": 4,
+      "banos": 3,
+      "direccion": "Camino Las Terrazas 234",
+      "region": "09",
+      "comuna": 17,
+      "tipo_inmueble": "casa",
+      "precio": 205000000,
+      "usuario": 23
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 24,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Apartamento Ejecutivo",
+      "descripcion": "Elegante departamento con acabados de lujo.",
+      "m2_construidos": 90.0,
+      "m2_totales": 100.0,
+      "estacionamientos": 1,
+      "habitaciones": 2,
+      "banos": 2,
+      "direccion": "Av. Las Condes 3456",
+      "region": "13",
+      "comuna": 13,
+      "tipo_inmueble": "departamento",
+      "precio": 125000000,
+      "usuario": 24
+    }
+  },
+  {
+    "model": "gestion_inmuebles.inmueble",
+    "pk": 25,
+    "fields": {
+      "foto_inmueble": "inmuebles/www.jpg",
+      "nombre": "Refugio de Montaña",
+      "descripcion": "Casa rústica en zona de naturaleza y tranquilidad.",
+      "m2_construidos": 110.0,
+      "m2_totales": 2500.0,
+      "estacionamientos": 2,
+      "habitaciones": 2,
+      "banos": 2,
+      "direccion": "Sector Alto del Valle s/n",
+      "region": "07",
+      "comuna": 12,
+      "tipo_inmueble": "casa",
+      "precio": 98000000,
+      "usuario": 25
     }
   }
 ]

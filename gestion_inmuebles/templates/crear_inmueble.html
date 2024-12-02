@@ -22,8 +22,7 @@
                     </p>
                     {% endif %}
 
-                    <form action="{% url 'crear_inmueble' %}" method="POST" class="needs-validation " novalidate
-                        enctype="multipart/form-data">
+                    <form method="POST" class="needs-validation " novalidate enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="mb-3 ">
                             {{ form.as_p}}

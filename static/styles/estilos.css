@@ -1,0 +1,249 @@
+:root {
+  --primary-color: #2937f0;
+  --secondary-color: #9f1ae2;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+}
+
+.property-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav-link {
+  color: #333;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.hero-header {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 6rem 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Soft dark overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-cta {
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.btn-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .hero-header {
+    padding: 3rem 0;
+  }
+
+  .display-5 {
+    font-size: 2.5rem;
+  }
+}
+
+.testimonial-section {
+  background: linear-gradient(135deg, #3494e6, #2a2a72);
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-content {
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-quote {
+  font-family: "Georgia", serif;
+  font-style: italic;
+  position: relative;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.testimonial-quote::before,
+.testimonial-quote::after {
+  content: '"';
+  font-size: 4rem;
+  color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+}
+
+.testimonial-quote::before {
+  top: -2rem;
+  left: -2rem;
+}
+
+.testimonial-quote::after {
+  bottom: -2rem;
+  right: -2rem;
+}
+
+.testimonial-author {
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 1rem;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .testimonial-quote {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-quote::before,
+  .testimonial-quote::after {
+    font-size: 2rem;
+  }
+}
+
+:root {
+  --color-primario: #3494e6;
+  --color-secundario: #2a2a72;
+}
+
+.seccion-caracteristicas {
+  background-color: #f8f9fa;
+  padding: 6rem 0;
+}
+
+.encabezado-seccion {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+.encabezado-seccion::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--color-primario),
+    var(--color-secundario)
+  );
+}
+
+.tarjeta-caracteristica {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.tarjeta-caracteristica:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.icono-caracteristica {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primario),
+    var(--color-secundario)
+  );
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-caracteristica:hover .icono-caracteristica {
+  transform: rotate(360deg);
+}
+
+.titulo-caracteristica {
+  color: var(--color-secundario);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.descripcion-caracteristica {
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+.descripcion-principal {
+  color: #495057;
+  line-height: 1.7;
+}
+
+.boton-llamada {
+  background: linear-gradient(
+    to right,
+    var(--color-primario),
+    var(--color-secundario)
+  );
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.boton-llamada:hover {
+  transform: scale(1.05);
+  background: linear-gradient(
+    to right,
+    var(--color-secundario),
+    var(--color-primario)
+  );
+}
+
+@media (max-width: 768px) {
+  .seccion-caracteristicas {
+    padding: 3rem 0;
+  }
+
+  .tarjeta-caracteristica {
+    margin-bottom: 1.5rem;
+  }
+}

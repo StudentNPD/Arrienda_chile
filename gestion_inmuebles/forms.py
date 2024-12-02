@@ -5,7 +5,6 @@ from .models import Usuario, Inmueble
 from django.contrib.auth.forms import UserCreationForm
 
 
-
     
 class UsuarioForm(UserCreationForm):
     class Meta:
@@ -72,6 +71,7 @@ class UsuarioForm(UserCreationForm):
                 }
             )
         }
+        
 
     # Campos de contraseña
     password1 = forms.CharField(
@@ -92,6 +92,15 @@ class UsuarioForm(UserCreationForm):
             }
         )
     )
+    def __init__(self, *args, **kwargs):
+        self.instance = kwargs.get('instance')  # El usuario actual
+        super().__init__(*args, **kwargs)
+
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        if Usuario.objects.filter(email=email).exclude(pk=self.instance.pk).exists():
+            raise forms.ValidationError("Este correo ya está en uso por otro usuario.")
+        return email
         
 class InmuebleForm(ModelForm):
     class Meta:

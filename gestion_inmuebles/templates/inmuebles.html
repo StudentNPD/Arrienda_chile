@@ -53,28 +53,29 @@
 
                 <div class="row row-cols-1 row-cols-md-3 g-4 pb-5">
                     {% for inmuebles in inmuebles %}
-                    <div class="col">
-                        <div class="card h-100 order border-0">
 
+                    <div class="col">
+                        <div class="card property-card h-100 shadow-sm border-0">
                             {% if inmuebles.foto_inmueble %}
-                            <img src="{{ inmuebles.foto_inmueble.url }}" width=500>
+                            <img src="{{ inmuebles.foto_inmueble.url }}" class="card-img-top" alt="Propiedad 1">
                             {% endif %}
 
-
-                            <!-- <img src="https://imanquehue.com/content/uploads/departamento-piloto.png" alt="Descripción"> -->
-                            <div class="card-body p-4 ">
+                            <div class="card-body">
                                 <p> {{inmuebles.comuna}} | {{inmuebles.region}} </p>
                                 <h5 class="card-title">{{inmuebles.nombre}}</h5>
-                                <h3 class="card-text fw-medium"> {{inmuebles.precio}} </h3>
-                                <p class="card-text">{{inmuebles.descripcion}}</p>
-                                <p>{{inmuebles.habitaciones}}habitaciones | {{inmuebles.banos}}baños |
+                                <p class="card-text text-muted">{{inmuebles.descripcion}}</p>
+                                <p>{{inmuebles.habitaciones}} habitaciones | {{inmuebles.banos}} baños |
                                     {{inmuebles.m2_construidos}}m² útiles </p>
-                                <a href="#" class="btn btn-primary">Solicitar más información</a>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h4 text-primary mb-0">{{inmuebles.precio_clp}}</span>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">Ver Detalles</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     {% endfor %}
                 </div>
+
 
             </div>
         </div>

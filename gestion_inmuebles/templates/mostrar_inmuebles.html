@@ -4,7 +4,7 @@
 
 {% block content %}
 
-<h1 class="text-center pt-5">DESTACADOS</h1>
+<h1 class="text-center pt-5">Mis Inmuebles</h1>
 <hr>
 <!-- Recorrer elementos -->
 <!--SECCION DESTACADOS CARDS-->
@@ -23,6 +23,7 @@
                             {{ comunas.nombre }}
                         </option>
                         {% endfor %}
+
                     </select>
                     <select name="region" class="form-select" onchange="this.form.submit()">
                         <option value="">Regiones</option>
@@ -40,11 +41,7 @@
                         </option>
                         {% endfor %}
                     </select>
-
-
-
-
-                    <button type="submit">Buscar</button>
+                    <button class="mt-3 btn btn-primary" type="submit">Buscar</button>
                 </form>
                 <h1>{{comuna_id }}</h1>
 
@@ -54,48 +51,33 @@
             <div class="col-10 ">
 
                 <div class="row row-cols-1 row-cols-md-3 g-4 pb-5">
-                    {% for inmuebles in inmueble %}
+                    {% for inmuebles in mostrar_inmuebles %}
                     <div class="col">
-                        <div class="card h-100 order border-0">
-
+                        <div class="card property-card h-100 shadow-sm border-0">
                             {% if inmuebles.foto_inmueble %}
-                            <img src="{{ inmuebles.foto_inmueble.url }}" width=500>
+                            <img src="{{ inmuebles.foto_inmueble.url }}" class="card-img-top" alt="Propiedad 1">
                             {% endif %}
 
-
-                            <!-- <img src="https://imanquehue.com/content/uploads/departamento-piloto.png" alt="Descripción"> -->
-                            <div class="card-body p-4 ">
+                            <div class="card-body">
                                 <p> {{inmuebles.comuna}} | {{inmuebles.region}} </p>
                                 <h5 class="card-title">{{inmuebles.nombre}}</h5>
-                                <h3 class="card-text fw-medium"> {{inmuebles.precio}} </h3>
-                                <p class="card-text">{{inmuebles.descripcion}}</p>
-                                <p>{{inmuebles.habitaciones}}habitaciones | {{inmuebles.banos}}baños |
+                                <p class="card-text text-muted">{{inmuebles.descripcion}}</p>
+                                <p>{{inmuebles.habitaciones}} habitaciones | {{inmuebles.banos}} baños |
                                     {{inmuebles.m2_construidos}}m² útiles </p>
-                                <a href="{% url 'detalle_inmueble' inmueble.id %}">Editar tarea</a>
-                                <a href="{% url 'eliminar_inmueble' inmueble.id %}">Eliminar tarea</a>
-                                <a href="#" class="btn btn-primary">Solicitar más información</a>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="h4 text-primary mb-0">{{inmuebles.precio_clp}}</span>
+                                    <a class="btn btn-sm btn-outline-primary"
+                                        href="{% url 'detalle_inmueble' inmuebles.id %}">Editar tarea</a>
+                                    <a class="btn btn-sm btn-outline-primary"
+                                        href="{% url 'eliminar_inmueble' inmuebles.id %}">Eliminar tarea</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     {% endfor %}
                 </div>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+
+
             </div>
         </div>
     </div>

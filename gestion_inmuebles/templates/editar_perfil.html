@@ -1,7 +1,7 @@
+<!-- HACER EL EDIT DE PROFILE -->
 {% extends "layouts/base.html" %}
-{% block title %}Mis Propiedades{% endblock %}
+{% block title %}Perfil{% endblock %}
 {% block content %}
-
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -10,20 +10,13 @@
                     <h2 class="mb-0">Editar Propiedad</h2>
                 </div>
                 <div class="card-body">
-                    {% if messages %}
-                    {% for message in messages %}
-                    <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
-                        {{ message }}
-                    </div>
-                    {% endfor %}
-                    {% endif %}
 
-                    <form method="post" enctype="multipart/form-data">
+
+                    <form method="post" action="{% url 'editar_perfil' %}" enctype="multipart/form-data">
                         {% csrf_token %}
 
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label class="form-label">Nombre</label>
                                 {{ form.as_p }}
 
                             </div>
@@ -41,4 +34,5 @@
         </div>
     </div>
 </div>
+
 {% endblock %}
